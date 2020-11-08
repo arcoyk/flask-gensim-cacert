@@ -1,0 +1,213 @@
+{
+  "engine": "darwin|Transformer|1.32.0|latest|latest",
+  "containerized": false,
+  "host": "Catalina (10.15.2)",
+  "type": "build",
+  "state": "done",
+  "target_reference": "flask-gensim",
+  "system": {
+    "type": "Linux",
+    "release": "4.19.76-linuxkit",
+    "os": "Debian GNU/Linux 10 (buster)"
+  },
+  "source_image": {
+    "id": "sha256:c4e1023ebd04c9ef734b0f9077d9a658680ea3a517a9d407b42f47b14070a049",
+    "name": "flask-gensim:latest",
+    "size": 931994722,
+    "size_human": "932 MB",
+    "create_time": "2020-11-08T09:06:46Z",
+    "all_names": [
+      "flask-gensim:latest"
+    ],
+    "docker_version": "19.03.12",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "80/tcp"
+    ]
+  },
+  "minified_image_size": 300610905,
+  "minified_image_size_human": "301 MB",
+  "minified_image": "flask-gensim.slim",
+  "minified_image_has_data": true,
+  "minified_by": 3.1003357047210245,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/c4e1023ebd04c9ef734b0f9077d9a658680ea3a517a9d407b42f47b14070a049/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "flask-gensim-seccomp.json",
+  "apparmor_profile_name": "flask-gensim-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": false,
+      "id": "sha256:1510e850178318cd2b654439b56266e7b6cbff36f95f343f662c708cd51d0610",
+      "full_name": "debian:latest",
+      "repo_name": "debian",
+      "version_tag": "latest",
+      "raw_tags": [
+        "debian:latest"
+      ],
+      "create_time": "2020-10-13T01:38:30Z",
+      "new_size": 114072159,
+      "new_size_human": "114 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2020-10-13T01:38:30Z",
+          "is_nop": true,
+          "local_image_exits": false,
+          "layer_index": 0,
+          "size": 114072159,
+          "size_human": "114 MB",
+          "params": "file:6627ad39ea0cb9fcb212342326d14efaff51aece1fd0dc16d5bbcaa25d858622 in /",
+          "command_snippet": "ADD file:6627ad39ea0cb9fcb212342326d14efaff5...",
+          "command_all": "ADD file:6627ad39ea0cb9fcb212342326d14efaff51aece1fd0dc16d5bbcaa25d858622 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2020-10-13T01:38:30Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exits": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"bash\"]",
+          "command_snippet": "CMD [\"bash\"]",
+          "command_all": "CMD [\"bash\"]",
+          "raw_tags": [
+            "debian:latest"
+          ]
+        }
+      ]
+    },
+    {
+      "is_top_image": true,
+      "id": "sha256:c4e1023ebd04c9ef734b0f9077d9a658680ea3a517a9d407b42f47b14070a049",
+      "full_name": "flask-gensim:latest",
+      "repo_name": "flask-gensim",
+      "version_tag": "latest",
+      "raw_tags": [
+        "flask-gensim:latest"
+      ],
+      "create_time": "2020-11-08T09:06:46Z",
+      "new_size": 817922563,
+      "new_size_human": "818 MB",
+      "base_image_id": "sha256:1510e850178318cd2b654439b56266e7b6cbff36f95f343f662c708cd51d0610",
+      "instructions": [
+        {
+          "type": "RUN",
+          "time": "2020-11-05T07:57:26Z",
+          "is_nop": false,
+          "local_image_exits": true,
+          "intermediate_image_id": "sha256:342c2dbc0df4bcd53e050470ea172eb23380dac739ffe7c572b916adef19e0e4",
+          "layer_index": 0,
+          "size": 17506288,
+          "size_human": "18 MB",
+          "command_snippet": "RUN apt update",
+          "command_all": "RUN apt update",
+          "system_commands": [
+            "apt update"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2020-11-05T08:01:05Z",
+          "is_nop": false,
+          "local_image_exits": true,
+          "intermediate_image_id": "sha256:8e5598bf4d6208be3dae4bf7eba9212943ee61dd16c2916bb5d93caf6edc57ca",
+          "layer_index": 0,
+          "size": 448489448,
+          "size_human": "448 MB",
+          "command_snippet": "RUN apt install -y python3 python3-pip",
+          "command_all": "RUN apt install -y python3 python3-pip",
+          "system_commands": [
+            "apt install -y python3 python3-pip"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2020-11-05T08:01:58Z",
+          "is_nop": false,
+          "local_image_exits": true,
+          "intermediate_image_id": "sha256:ba41fe3b7e9757351eab994dc00311b5124c395d4ed95048e9f178f02523ca89",
+          "layer_index": 0,
+          "size": 194206731,
+          "size_human": "194 MB",
+          "command_snippet": "RUN pip3 install --no-cache-dir gensim flask",
+          "command_all": "RUN pip3 install --no-cache-dir gensim flask",
+          "system_commands": [
+            "pip3 install --no-cache-dir gensim flask"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2020-11-05T08:01:59Z",
+          "is_nop": false,
+          "local_image_exits": true,
+          "intermediate_image_id": "sha256:0bcd69aba4d998583fbe625f22bf0a1340feddc9d9e3217de48485a1634b19d0",
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN apt clean",
+          "command_all": "RUN apt clean",
+          "system_commands": [
+            "apt clean"
+          ]
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2020-11-05T08:42:10Z",
+          "is_nop": true,
+          "local_image_exits": true,
+          "intermediate_image_id": "sha256:7e5b97c00099470f5344629559fe4640ebd61be3a155ad605ae852033ff08bb9",
+          "layer_index": 0,
+          "size": 0,
+          "params": "80",
+          "command_snippet": "EXPOSE 80",
+          "command_all": "EXPOSE 80"
+        },
+        {
+          "type": "ADD",
+          "time": "2020-11-08T09:06:46Z",
+          "is_nop": true,
+          "local_image_exits": true,
+          "intermediate_image_id": "sha256:68f0a921866fe9631c165963e58814de84a3dcc8b65f3006ef8768d7d1a45b9b",
+          "layer_index": 0,
+          "size": 157720096,
+          "size_human": "158 MB",
+          "params": "dir:753aa4f8a30277a4e842c04dcb3e1df089e7c97b1844120ffcec4092cf7fdb7f in ./app",
+          "command_snippet": "ADD dir:753aa4f8a30277a4e842c04dcb3e1df089e7...",
+          "command_all": "ADD dir:753aa4f8a30277a4e842c04dcb3e1df089e7c97b1844120ffcec4092cf7fdb7f ./app",
+          "target": "./app",
+          "source_type": "dir"
+        },
+        {
+          "type": "ENV",
+          "time": "2020-11-08T09:06:46Z",
+          "is_nop": true,
+          "local_image_exits": true,
+          "intermediate_image_id": "sha256:036db190cc52032a1565d9ac49f54887e09962e7357eea8e673f1cf0bd7037a3",
+          "layer_index": 0,
+          "size": 0,
+          "params": "FLASK_APP=test.py",
+          "command_snippet": "ENV FLASK_APP=test.py",
+          "command_all": "ENV FLASK_APP=test.py"
+        },
+        {
+          "type": "CMD",
+          "time": "2020-11-08T09:06:46Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "local_image_exits": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "cd app && flask run --host='0.0.0.0' --port=80",
+          "command_snippet": "CMD cd app && flask run --host='0.0.0.0' --p...",
+          "command_all": "CMD cd app && flask run --host='0.0.0.0' --port=80",
+          "raw_tags": [
+            "flask-gensim:latest"
+          ]
+        }
+      ]
+    }
+  ]
+}
